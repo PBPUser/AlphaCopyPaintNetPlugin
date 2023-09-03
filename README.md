@@ -1,4 +1,4 @@
-# AlphaCopyPaintNetPlugin
+# Color channels transfer for Paint.net
 Transfer color channels between layers
 
 # Building
