@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net7.0-windows</TargetFramework>
+	  <RootNamespace>PaintDotNet.Effects.Samples</RootNamespace>
+	  <Nullable>enable</Nullable>
+	  <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+	  <UseWindowsForms>true</UseWindowsForms>
+	  <UseWPF>true</UseWPF>
+	  <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	  <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+	  <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+	  <Deterministic>False</Deterministic>
+	  <AssemblyVersion>1.0.*</AssemblyVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="PaintDotNet.Base">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Base.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.ComponentModel">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.ComponentModel.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Core">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Core.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Data">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Data.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Effects">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Effects.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Effects.Core">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Effects.Core.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Effects.Gpu">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Effects.Gpu.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Framework">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Framework.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Fundamentals">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Fundamentals.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Primitives">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Primitives.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.PropertySystem">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.PropertySystem.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Resources">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Resources.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Windows">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Windows.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Windows.Core">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Windows.Core.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+    <Reference Include="PaintDotNet.Windows.Framework">
+      <HintPath>D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\PaintDotNet.Windows.Framework.dll</HintPath>
+		<Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;C:\Users\iwuwka\source\repos\PaintNetPlugin\PaintNetPlugin\bin\Debug\net7.0-windows\PaintNetPlugin.dll&quot; D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\Effects\PaintNetPlugin.dll /y" />
+  </Target>
+
+</Project>
