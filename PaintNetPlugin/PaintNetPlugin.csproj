@@ -81,8 +81,4 @@
     </Reference>
   </ItemGroup>
 
-  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="copy &quot;C:\Users\iwuwka\source\repos\PaintNetPlugin\PaintNetPlugin\bin\Debug\net7.0-windows\PaintNetPlugin.dll&quot; D:\PortableApps\PaintDotNetPortable\App\PaintDotNet64\Effects\PaintNetPlugin.dll /y" />
-  </Target>
-
 </Project>
